@@ -1,0 +1,14 @@
+.more_paging {
+  background-color: #EAEAEA;
+  color: #666666;
+  cursor: pointer;
+  font-weight: bold;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.more_paging:hover{
+    background-color: #EFEFEF;
+}

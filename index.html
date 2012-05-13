@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lazy Paging Plugin Test</title>
+<link href="css/jquery.lazypaging.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.lazypaging.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#activity_end_point1').lazyPaging({timesScroll: 0, onloadRequestSent: false, targetObj:'activity_end_point1',updateDiv:'#activity1',updateURL: 'paging_index1.html #activity',onScroll: true,relativeScrollObj:'#relativeobj',firePagingHeight:0});
+	$('#activity_end_point2').lazyPaging({timesScroll: 5, onloadRequestSent: true, targetObj:'activity_end_point2',updateDiv:'#activity2',updateURL: 'paging_index2.html #activity',onScroll: true});
+});
+</script>
+</head>
+<body>
+<div id="relativeobj" style="width:50%;float:left;height:200px;overflow:scroll;">
+<div id="activity1">
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+</div>
+<div id="activity_end_point1" lastActivity="10000">Show More</div>
+</div>
+<div style="width:50%;float:left;">
+<div id="activity2">
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+	<div>test1</div>
+</div>
+<div id="activity_end_point2" lastActivity="10000">Show More</div>
+</div>
+</body>
+</html>
